@@ -1,4 +1,5 @@
 {
+  "compileOnSave": true,
   "compilerOptions": {
     "sourceMap": true,
     "declaration": false,
@@ -13,6 +14,7 @@
     "target": "es5",
     "module": "es2015",
     "baseUrl": "",
+    "noStrictGenericChecks": true,
     "types": [],
     "typeRoots": [
       "../node_modules/@types"
