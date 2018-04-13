@@ -28,39 +28,41 @@ import { InputComponent } from './shared/input/input.component';
 import { RadioComponent } from './shared/radio/radio.component';
 import { OrderItemsComponent } from './order/order-items/order-items.component';
 import { OrderService } from "./order/order.service";
+import { DeliveryCostsComponent } from './order/delivery-costs/delivery-costs.component';
 var AppModule = (function () {
     function AppModule() {
     }
+    AppModule = __decorate([
+        NgModule({
+            declarations: [
+                AppComponent,
+                HeaderComponent,
+                HomeComponent,
+                AboutComponent,
+                RestaurantsComponent,
+                RestaurantComponent,
+                RestaurantDetailComponent,
+                MenuComponent,
+                ShoppingCartComponent,
+                MenuItemComponent,
+                ReviewsComponent,
+                OrderComponent,
+                InputComponent,
+                RadioComponent,
+                OrderItemsComponent,
+                DeliveryCostsComponent
+            ],
+            imports: [
+                BrowserModule,
+                HttpModule,
+                RouterModule.forRoot(ROUTES),
+                FormsModule
+            ],
+            providers: [RestaurantsService, ShoppingCartService, OrderService, { provide: LOCALE_ID, useValue: 'pt-BR' }],
+            bootstrap: [AppComponent]
+        })
+    ], AppModule);
     return AppModule;
 }());
-AppModule = __decorate([
-    NgModule({
-        declarations: [
-            AppComponent,
-            HeaderComponent,
-            HomeComponent,
-            AboutComponent,
-            RestaurantsComponent,
-            RestaurantComponent,
-            RestaurantDetailComponent,
-            MenuComponent,
-            ShoppingCartComponent,
-            MenuItemComponent,
-            ReviewsComponent,
-            OrderComponent,
-            InputComponent,
-            RadioComponent,
-            OrderItemsComponent
-        ],
-        imports: [
-            BrowserModule,
-            HttpModule,
-            RouterModule.forRoot(ROUTES),
-            FormsModule
-        ],
-        providers: [RestaurantsService, ShoppingCartService, OrderService, { provide: LOCALE_ID, useValue: 'pt-BR' }],
-        bootstrap: [AppComponent]
-    })
-], AppModule);
 export { AppModule };
 //# sourceMappingURL=app.module.js.map
