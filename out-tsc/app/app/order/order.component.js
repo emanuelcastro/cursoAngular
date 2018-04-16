@@ -12,6 +12,7 @@ import { OrderService } from "../order/order.service";
 var OrderComponent = (function () {
     function OrderComponent(orderService) {
         this.orderService = orderService;
+        this.delivery = 8;
         this.paymentOptions = [
             { label: 'Dinheiro', value: 'MON' },
             { label: 'Cartão de Débito', value: 'DEB' },
@@ -19,6 +20,9 @@ var OrderComponent = (function () {
         ];
     }
     OrderComponent.prototype.ngOnInit = function () {
+    };
+    OrderComponent.prototype.itemsValue = function () {
+        return this.orderService.itemsValue();
     };
     OrderComponent.prototype.cartItems = function () {
         return this.orderService.carItems();
@@ -32,14 +36,14 @@ var OrderComponent = (function () {
     OrderComponent.prototype.remove = function (item) {
         this.orderService.remove(item);
     };
+    OrderComponent = __decorate([
+        Component({
+            selector: 'mt-order',
+            templateUrl: './order.component.html'
+        }),
+        __metadata("design:paramtypes", [OrderService])
+    ], OrderComponent);
     return OrderComponent;
 }());
-OrderComponent = __decorate([
-    Component({
-        selector: 'mt-order',
-        templateUrl: './order.component.html'
-    }),
-    __metadata("design:paramtypes", [OrderService])
-], OrderComponent);
 export { OrderComponent };
 //# sourceMappingURL=order.component.js.map

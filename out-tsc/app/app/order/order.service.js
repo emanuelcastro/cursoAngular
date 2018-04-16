@@ -13,6 +13,9 @@ var OrderService = (function () {
     function OrderService(cartService) {
         this.cartService = cartService;
     }
+    OrderService.prototype.itemsValue = function () {
+        return this.cartService.total();
+    };
     OrderService.prototype.carItems = function () {
         return this.cartService.items;
     };
@@ -25,11 +28,11 @@ var OrderService = (function () {
     OrderService.prototype.remove = function (item) {
         this.cartService.removeItem(item);
     };
+    OrderService = __decorate([
+        Injectable(),
+        __metadata("design:paramtypes", [ShoppingCartService])
+    ], OrderService);
     return OrderService;
 }());
-OrderService = __decorate([
-    Injectable(),
-    __metadata("design:paramtypes", [ShoppingCartService])
-], OrderService);
 export { OrderService };
 //# sourceMappingURL=order.service.js.map

@@ -13,6 +13,9 @@ var DeliveryCostsComponent = (function () {
     }
     DeliveryCostsComponent.prototype.ngOnInit = function () {
     };
+    DeliveryCostsComponent.prototype.total = function () {
+        return this.delivery + this.itemsValue;
+    };
     __decorate([
         Input(),
         __metadata("design:type", Number)
