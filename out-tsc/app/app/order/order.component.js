@@ -9,6 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { Component } from '@angular/core';
 import { OrderService } from "../order/order.service";
+import { OrderItem } from "./order.model";
 var OrderComponent = (function () {
     function OrderComponent(orderService) {
         this.orderService = orderService;
@@ -35,6 +36,17 @@ var OrderComponent = (function () {
     };
     OrderComponent.prototype.remove = function (item) {
         this.orderService.remove(item);
+    };
+    OrderComponent.prototype.checkOrder = function (order) {
+        var _this = this;
+        order.orderItems = this.cartItems()
+            .map(function (item) { return new OrderItem(item.quantity, item.menuItem.id); });
+        this.orderService.checkOrder(order)
+            .subscribe(function (orderId) {
+            console.log("Compra conclu\u00EDda: " + orderId);
+            _this.orderService.clear();
+        });
+        console.log(order);
     };
     OrderComponent = __decorate([
         Component({
