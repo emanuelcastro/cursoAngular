@@ -10,9 +10,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 import { Component } from '@angular/core';
 import { OrderService } from "../order/order.service";
 import { OrderItem } from "./order.model";
+import { Router } from '@angular/router';
 var OrderComponent = (function () {
-    function OrderComponent(orderService) {
+    function OrderComponent(orderService, router) {
         this.orderService = orderService;
+        this.router = router;
         this.delivery = 8;
         this.paymentOptions = [
             { label: 'Dinheiro', value: 'MON' },
@@ -43,7 +45,7 @@ var OrderComponent = (function () {
             .map(function (item) { return new OrderItem(item.quantity, item.menuItem.id); });
         this.orderService.checkOrder(order)
             .subscribe(function (orderId) {
-            console.log("Compra conclu\u00EDda: " + orderId);
+            _this.router.navigate(['/order-sumary']);
             _this.orderService.clear();
         });
         console.log(order);
@@ -53,7 +55,7 @@ var OrderComponent = (function () {
             selector: 'mt-order',
             templateUrl: './order.component.html'
         }),
-        __metadata("design:paramtypes", [OrderService])
+        __metadata("design:paramtypes", [OrderService, Router])
     ], OrderComponent);
     return OrderComponent;
 }());

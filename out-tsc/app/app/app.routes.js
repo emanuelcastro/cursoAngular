@@ -5,6 +5,7 @@ import { RestaurantDetailComponent } from "./restaurant-detail/restaurant-detail
 import { MenuComponent } from "./restaurant-detail/menu/menu.component";
 import { ReviewsComponent } from "./restaurant-detail/reviews/reviews.component";
 import { OrderComponent } from "./order/order.component";
+import { OrderSumaryComponent } from "./order-sumary/order-sumary.component";
 export var ROUTES = [
     { path: '', component: HomeComponent },
     { path: 'about', component: AboutComponent },
@@ -16,6 +17,7 @@ export var ROUTES = [
             { path: 'reviews', component: ReviewsComponent }
         ]
     },
-    { path: 'order', component: OrderComponent }
+    { path: 'order', component: OrderComponent },
+    { path: 'order-sumary', component: OrderSumaryComponent }
 ];
 //# sourceMappingURL=app.routes.js.map
