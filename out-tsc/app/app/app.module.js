@@ -30,35 +30,35 @@ import { SharedModule } from "./shared/shared.module";
 var AppModule = (function () {
     function AppModule() {
     }
+    AppModule = __decorate([
+        NgModule({
+            declarations: [
+                AppComponent,
+                HeaderComponent,
+                HomeComponent,
+                RestaurantsComponent,
+                RestaurantComponent,
+                RestaurantDetailComponent,
+                MenuComponent,
+                ShoppingCartComponent,
+                MenuItemComponent,
+                ReviewsComponent,
+                OrderComponent,
+                OrderItemsComponent,
+                DeliveryCostsComponent,
+                OrderSumaryComponent
+            ],
+            imports: [
+                BrowserModule,
+                HttpModule,
+                RouterModule.forRoot(ROUTES),
+                SharedModule
+            ],
+            providers: [RestaurantsService, ShoppingCartService, OrderService, { provide: LOCALE_ID, useValue: 'pt-BR' }],
+            bootstrap: [AppComponent]
+        })
+    ], AppModule);
     return AppModule;
 }());
-AppModule = __decorate([
-    NgModule({
-        declarations: [
-            AppComponent,
-            HeaderComponent,
-            HomeComponent,
-            RestaurantsComponent,
-            RestaurantComponent,
-            RestaurantDetailComponent,
-            MenuComponent,
-            ShoppingCartComponent,
-            MenuItemComponent,
-            ReviewsComponent,
-            OrderComponent,
-            OrderItemsComponent,
-            DeliveryCostsComponent,
-            OrderSumaryComponent
-        ],
-        imports: [
-            BrowserModule,
-            HttpModule,
-            RouterModule.forRoot(ROUTES),
-            SharedModule
-        ],
-        providers: [RestaurantsService, ShoppingCartService, OrderService, { provide: LOCALE_ID, useValue: 'pt-BR' }],
-        bootstrap: [AppComponent]
-    })
-], AppModule);
 export { AppModule };
 //# sourceMappingURL=app.module.js.map
