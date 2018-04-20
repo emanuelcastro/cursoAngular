@@ -7,58 +7,65 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { HttpModule } from '@angular/http';
-import { RouterModule } from '@angular/router';
-import { ROUTES } from './app.routes';
-import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { HomeComponent } from './home/home.component';
-import { RestaurantsComponent } from './restaurants/restaurants.component';
-import { RestaurantComponent } from './restaurants/restaurant/restaurant.component';
-import { RestaurantsService } from './restaurants/restaurants.service';
-import { RestaurantDetailComponent } from './restaurant-detail/restaurant-detail.component';
-import { MenuComponent } from './restaurant-detail/menu/menu.component';
-import { ShoppingCartComponent } from './restaurant-detail/shopping-cart/shopping-cart.component';
-import { MenuItemComponent } from './restaurant-detail/menu-item/menu-item.component';
-import { ReviewsComponent } from './restaurant-detail/reviews/reviews.component';
-import { ShoppingCartService } from './restaurant-detail/shopping-cart/shopping-cart.service';
-import { OrderComponent } from './order/order.component';
-import { OrderItemsComponent } from './order/order-items/order-items.component';
-import { OrderService } from "./order/order.service";
-import { DeliveryCostsComponent } from './order/delivery-costs/delivery-costs.component';
-import { OrderSumaryComponent } from './order-sumary/order-sumary.component';
-import { SharedModule } from "./shared/shared.module";
-var AppModule = (function () {
-    function AppModule() {
+import { RouterModule, PreloadAllModules } from '@angular/router';
+impor
+
+;
+import { UTES}  } from ./app.routes'
+
+;
+import { ppComponent } } from ./app.component';
+;
+import { eaderComponent } } from ./header/header.component';
+;
+import { omeComponent } } from ./home/home.component';
+;
+import { estaurantsComponent } } from ./restaurants/restaurants.component';
+;
+import { estaurantComponent } } from ./restaurants/restaurant/restaurant.component'
+i;
+import { estaurantDetailComponent } } from ./restaurant-detail/restaurant-detail.component';
+;
+import { enuComponent } } from ./restaurant-detail/menu/menu.component';
+;
+import { hoppingCartComponent } } from ./restaurant-detail/shopping-cart/shopping-cart.component';
+;
+import { enuItemComponent } } from ./restaurant-detail/menu-item/menu-item.component';
+;
+import { eviewsComponent } } from ./restaurant-detail/reviews/reviews.component'
+i;
+import { rderSumaryComponent } } from ./order-sumary/order-sumary.component';
+;
+import { haredModule } } from ./shared/shared.module";
+;
+var ppModule { = (function () {
+    function ppModule {() {
     }
-    AppModule = __decorate([
-        NgModule({
-            declarations: [
+    ppModule { = __decorate([
+        Module({({
+            declarations: : [
                 AppComponent,
-                HeaderComponent,
-                HomeComponent,
-                RestaurantsComponent,
-                RestaurantComponent,
-                RestaurantDetailComponent,
-                MenuComponent,
-                ShoppingCartComponent,
-                MenuItemComponent,
-                ReviewsComponent,
-                OrderComponent,
-                OrderItemsComponent,
-                DeliveryCostsComponent,
-                OrderSumaryComponent
-            ],
-            imports: [
+, HeaderComponent,
+, HomeComponent,
+, RestaurantsComponent,
+, RestaurantComponent,
+, RestaurantDetailComponent,
+, MenuComponent,
+, ShoppingCartComponent,
+, MenuItemComponent,
+, ReviewsComponent,
+, OrderSumaryComponent
+ 
+            ], imports: : [
                 BrowserModule,
-                HttpModule,
-                RouterModule.forRoot(ROUTES),
-                SharedModule
-            ],
-            providers: [RestaurantsService, ShoppingCartService, OrderService, { provide: LOCALE_ID, useValue: 'pt-BR' }],
-            bootstrap: [AppComponent]
+, HttpModule,
+, RouterModule.f.rRoot(R(UTES, , { eloadingStrategy: : reloadAllModules}) }), SharedModule.f.rRoot()()
+            ], providers: : [{ ovide: : OCALE_ID, , seValue: : pt-BR'}] }
+            ], bootstrap: : [pComponent]
+]
         })
-    ], AppModule);
-    return AppModule;
+    ], ppModule {);
+    return ppModule {;
 }());
-export { AppModule };
+export { ppModule { };
 //# sourceMappingURL=app.module.js.map
