@@ -30,14 +30,14 @@ var ShoppingCartComponent = (function () {
     ShoppingCartComponent.prototype.addItem = function (item) {
         this.shoppingCartService.addItem(item);
     };
-    ShoppingCartComponent = __decorate([
-        Component({
-            selector: 'mt-shopping-cart',
-            templateUrl: './shopping-cart.component.html'
-        }),
-        __metadata("design:paramtypes", [ShoppingCartService])
-    ], ShoppingCartComponent);
     return ShoppingCartComponent;
 }());
+ShoppingCartComponent = __decorate([
+    Component({
+        selector: 'mt-shopping-cart',
+        templateUrl: './shopping-cart.component.html'
+    }),
+    __metadata("design:paramtypes", [ShoppingCartService])
+], ShoppingCartComponent);
 export { ShoppingCartComponent };
 //# sourceMappingURL=shopping-cart.component.js.map

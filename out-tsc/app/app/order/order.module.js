@@ -16,13 +16,13 @@ var ROUTES = [
 var OrderModule = (function () {
     function OrderModule() {
     }
-    OrderModule = __decorate([
-        NgModule({
-            declarations: [OrderComponent, OrderItemsComponent, DeliveryCostsComponent],
-            imports: [SharedModule, RouterModule.forChild(ROUTES)]
-        })
-    ], OrderModule);
     return OrderModule;
 }());
+OrderModule = __decorate([
+    NgModule({
+        declarations: [OrderComponent, OrderItemsComponent, DeliveryCostsComponent],
+        imports: [SharedModule, RouterModule.forChild(ROUTES)]
+    })
+], OrderModule);
 export { OrderModule };
 //# sourceMappingURL=order.module.js.map
