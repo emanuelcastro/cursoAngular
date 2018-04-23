@@ -8,22 +8,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 import { Component } from '@angular/core';
-var OrderSumaryComponent = (function () {
-    function OrderSumaryComponent() {
+var NotFoundComponent = (function () {
+    function NotFoundComponent() {
     }
-    OrderSumaryComponent.prototype.ngOnInit = function () {
+    NotFoundComponent.prototype.ngOnInit = function () {
     };
-    OrderSumaryComponent.prototype.rate = function () {
-        this.rated = true;
-    };
-    OrderSumaryComponent = __decorate([
+    NotFoundComponent = __decorate([
         Component({
-            selector: 'mt-order-sumary',
-            templateUrl: './order-sumary.component.html'
+            selector: 'mt-not-found',
+            templateUrl: './not-found.component.html'
         }),
         __metadata("design:paramtypes", [])
-    ], OrderSumaryComponent);
-    return OrderSumaryComponent;
+    ], NotFoundComponent);
+    return NotFoundComponent;
 }());
-export { OrderSumaryComponent };
-//# sourceMappingURL=order-sumary.component.js.map
+export { NotFoundComponent };
+//# sourceMappingURL=not-found.component.js.map

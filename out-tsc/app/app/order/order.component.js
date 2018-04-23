@@ -12,8 +12,8 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { OrderService } from "../order/order.service";
 import { OrderItem } from "./order.model";
 import { Router } from '@angular/router';
-var OrderComponent = OrderComponent_1 = (function () {
-    function OrderComponent(orderService, router, formBuilder) {
+var OrderComponent = (function () {
+    var OrderComponent = OrderComponent_1 = function OrderComponent(orderService, router, formBuilder) {
         this.orderService = orderService;
         this.router = router;
         this.formBuilder = formBuilder;
@@ -25,7 +25,7 @@ var OrderComponent = OrderComponent_1 = (function () {
             { label: 'Cartão de Débito', value: 'DEB' },
             { label: 'Cartão de Refeição', value: 'REF' }
         ];
-    }
+    };
     OrderComponent.prototype.ngOnInit = function () {
         this.orderForm = this.formBuilder.group({
             name: this.formBuilder.control('', [Validators.required, Validators.minLength(5)]),
@@ -74,17 +74,17 @@ var OrderComponent = OrderComponent_1 = (function () {
         });
         console.log(order);
     };
+    OrderComponent = OrderComponent_1 = __decorate([
+        Component({
+            selector: 'mt-order',
+            templateUrl: './order.component.html'
+        }),
+        __metadata("design:paramtypes", [OrderService,
+            Router,
+            FormBuilder])
+    ], OrderComponent);
     return OrderComponent;
+    var OrderComponent_1;
 }());
-OrderComponent = OrderComponent_1 = __decorate([
-    Component({
-        selector: 'mt-order',
-        templateUrl: './order.component.html'
-    }),
-    __metadata("design:paramtypes", [OrderService,
-        Router,
-        FormBuilder])
-], OrderComponent);
 export { OrderComponent };
-var OrderComponent_1;
 //# sourceMappingURL=order.component.js.map

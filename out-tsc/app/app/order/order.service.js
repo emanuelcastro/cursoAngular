@@ -42,11 +42,11 @@ var OrderService = (function () {
             .map(function (response) { return response.json(); })
             .map(function (order) { return order.id; });
     };
+    OrderService = __decorate([
+        Injectable(),
+        __metadata("design:paramtypes", [ShoppingCartService, Http])
+    ], OrderService);
     return OrderService;
 }());
-OrderService = __decorate([
-    Injectable(),
-    __metadata("design:paramtypes", [ShoppingCartService, Http])
-], OrderService);
 export { OrderService };
 //# sourceMappingURL=order.service.js.map
