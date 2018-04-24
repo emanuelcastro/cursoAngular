@@ -1,5 +1,5 @@
 export var environment = {
     production: true,
-    api: 'https://localhost'
+    api: 'http://localhost:3000'
 };
 //# sourceMappingURL=environment.prod.js.map
