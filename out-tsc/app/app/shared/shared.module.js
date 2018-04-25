@@ -16,8 +16,9 @@ import { OrderService } from "../order/order.service";
 import { SnackbarComponent } from './messages/snackbar/snackbar.component';
 import { NotificationService } from "./messages/notification.service";
 var SharedModule = (function () {
-    var SharedModule = SharedModule_1 = function SharedModule() {
-    };
+    function SharedModule() {
+    }
+    SharedModule_1 = SharedModule;
     SharedModule.forRoot = function () {
         return {
             ngModule: SharedModule_1,

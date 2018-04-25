@@ -8,11 +8,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 import { Injectable } from "@angular/core";
-import { Http } from "@angular/http";
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { MEAT_API } from "../app.api";
 import { ErrorHandler } from "app/app.error-handler";
+import { HttpClient } from "@angular/common/http";
 var RestaurantsService = (function () {
     function RestaurantsService(http) {
         this.http = http;
@@ -33,13 +33,11 @@ var RestaurantsService = (function () {
             .catch(ErrorHandler.handleError);
     };
     RestaurantsService.prototype.menuOfRestaurant = function (id) {
-        return this.http.get(MEAT_API + "/restaurants/" + id + "/menu")
-            .map(function (response) { return response.json(); })
-            .catch(ErrorHandler.handleError);
+        return this.http.get(MEAT_API + "/restaurants/" + id + "/menu");
     };
     RestaurantsService = __decorate([
         Injectable(),
-        __metadata("design:paramtypes", [Http])
+        __metadata("design:paramtypes", [HttpClient])
     ], RestaurantsService);
     return RestaurantsService;
 }());
