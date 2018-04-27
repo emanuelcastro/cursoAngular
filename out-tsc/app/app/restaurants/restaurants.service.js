@@ -11,35 +11,32 @@ import { Injectable } from "@angular/core";
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { MEAT_API } from "../app.api";
-import { ErrorHandler } from "app/app.error-handler";
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpParams } from "@angular/common/http";
 var RestaurantsService = (function () {
     function RestaurantsService(http) {
         this.http = http;
     }
     RestaurantsService.prototype.restaurants = function (search) {
-        return this.http.get(MEAT_API + "/restaurants", { params: { q: search } })
-            .map(function (response) { return response.json(); })
-            .catch(ErrorHandler.handleError);
+        var params = undefined;
+        if (search) {
+            params = new HttpParams().append('q', search);
+        }
+        return this.http.get(MEAT_API + "/restaurants", { params: params });
     };
     RestaurantsService.prototype.restaurantById = function (id) {
-        return this.http.get(MEAT_API + "/restaurants/" + id)
-            .map(function (response) { return response.json(); })
-            .catch(ErrorHandler.handleError);
+        return this.http.get(MEAT_API + "/restaurants/" + id);
     };
     RestaurantsService.prototype.reviewsOfRestaurant = function (id) {
-        return this.http.get(MEAT_API + "/restaurants/" + id + "/reviews")
-            .map(function (response) { return response.json(); })
-            .catch(ErrorHandler.handleError);
+        return this.http.get(MEAT_API + "/restaurants/" + id + "/reviews");
     };
     RestaurantsService.prototype.menuOfRestaurant = function (id) {
         return this.http.get(MEAT_API + "/restaurants/" + id + "/menu");
     };
-    RestaurantsService = __decorate([
-        Injectable(),
-        __metadata("design:paramtypes", [HttpClient])
-    ], RestaurantsService);
     return RestaurantsService;
 }());
+RestaurantsService = __decorate([
+    Injectable(),
+    __metadata("design:paramtypes", [HttpClient])
+], RestaurantsService);
 export { RestaurantsService };
 //# sourceMappingURL=restaurants.service.js.map

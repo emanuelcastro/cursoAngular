@@ -1,11 +1,12 @@
 var Order = (function () {
-    function Order(address, number, optionalAddress, paypamentOption, orderItems) {
+    function Order(address, number, optionalAddress, paypamentOption, orderItems, id) {
         if (orderItems === void 0) { orderItems = []; }
         this.address = address;
         this.number = number;
         this.optionalAddress = optionalAddress;
         this.paypamentOption = paypamentOption;
         this.orderItems = orderItems;
+        this.id = id;
     }
     return Order;
 }());

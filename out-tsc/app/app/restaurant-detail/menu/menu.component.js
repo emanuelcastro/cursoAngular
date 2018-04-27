@@ -22,15 +22,15 @@ var MenuComponent = (function () {
     MenuComponent.prototype.addMenuItem = function (item) {
         console.log(item);
     };
-    MenuComponent = __decorate([
-        Component({
-            selector: 'mt-menu',
-            templateUrl: './menu.component.html'
-        }),
-        __metadata("design:paramtypes", [RestaurantsService,
-            ActivatedRoute])
-    ], MenuComponent);
     return MenuComponent;
 }());
+MenuComponent = __decorate([
+    Component({
+        selector: 'mt-menu',
+        templateUrl: './menu.component.html'
+    }),
+    __metadata("design:paramtypes", [RestaurantsService,
+        ActivatedRoute])
+], MenuComponent);
 export { MenuComponent };
 //# sourceMappingURL=menu.component.js.map
