@@ -11,6 +11,7 @@ import { LoginComponent} from './security/login/login.component'
 
 export const ROUTES: Routes = [
   {path: '', component: HomeComponent},
+  {path: 'login', component: LoginComponent},
   {path: 'about', loadChildren: './about/about.module#AboutModule'},
   {path: 'restaurants', component: RestaurantsComponent},
   {path: 'restaurants/:id', component: RestaurantDetailComponent,

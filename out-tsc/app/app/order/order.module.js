@@ -13,16 +13,16 @@ import { DeliveryCostsComponent } from './delivery-costs/delivery-costs.componen
 var ROUTES = [
     { path: '', component: OrderComponent }
 ];
-var OrderModule = (function () {
+var OrderModule = /** @class */ (function () {
     function OrderModule() {
     }
+    OrderModule = __decorate([
+        NgModule({
+            declarations: [OrderComponent, OrderItemsComponent, DeliveryCostsComponent],
+            imports: [SharedModule, RouterModule.forChild(ROUTES)]
+        })
+    ], OrderModule);
     return OrderModule;
 }());
-OrderModule = __decorate([
-    NgModule({
-        declarations: [OrderComponent, OrderItemsComponent, DeliveryCostsComponent],
-        imports: [SharedModule, RouterModule.forChild(ROUTES)]
-    })
-], OrderModule);
 export { OrderModule };
 //# sourceMappingURL=order.module.js.map

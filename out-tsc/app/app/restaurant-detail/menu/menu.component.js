@@ -10,7 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { RestaurantsService } from '../../restaurants/restaurants.service';
-var MenuComponent = (function () {
+var MenuComponent = /** @class */ (function () {
     function MenuComponent(restaurantsService, route) {
         this.restaurantsService = restaurantsService;
         this.route = route;
@@ -22,15 +22,15 @@ var MenuComponent = (function () {
     MenuComponent.prototype.addMenuItem = function (item) {
         console.log(item);
     };
+    MenuComponent = __decorate([
+        Component({
+            selector: 'mt-menu',
+            templateUrl: './menu.component.html'
+        }),
+        __metadata("design:paramtypes", [RestaurantsService,
+            ActivatedRoute])
+    ], MenuComponent);
     return MenuComponent;
 }());
-MenuComponent = __decorate([
-    Component({
-        selector: 'mt-menu',
-        templateUrl: './menu.component.html'
-    }),
-    __metadata("design:paramtypes", [RestaurantsService,
-        ActivatedRoute])
-], MenuComponent);
 export { MenuComponent };
 //# sourceMappingURL=menu.component.js.map

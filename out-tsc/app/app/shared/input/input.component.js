@@ -9,8 +9,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { Component, Input, ContentChild } from '@angular/core';
 import { NgModel, FormControlName } from '@angular/forms';
-var InputComponent = (function () {
+var InputComponent = /** @class */ (function () {
     function InputComponent() {
+        this.showTip = true;
     }
     InputComponent.prototype.ngOnInit = function () {
     };
@@ -26,30 +27,34 @@ var InputComponent = (function () {
     InputComponent.prototype.hasError = function () {
         return this.input.invalid && (this.input.dirty || this.input.touched);
     };
+    __decorate([
+        Input(),
+        __metadata("design:type", String)
+    ], InputComponent.prototype, "label", void 0);
+    __decorate([
+        Input(),
+        __metadata("design:type", String)
+    ], InputComponent.prototype, "errorMessage", void 0);
+    __decorate([
+        Input(),
+        __metadata("design:type", Boolean)
+    ], InputComponent.prototype, "showTip", void 0);
+    __decorate([
+        ContentChild(NgModel),
+        __metadata("design:type", NgModel)
+    ], InputComponent.prototype, "model", void 0);
+    __decorate([
+        ContentChild(FormControlName),
+        __metadata("design:type", FormControlName)
+    ], InputComponent.prototype, "control", void 0);
+    InputComponent = __decorate([
+        Component({
+            selector: 'mt-input-container',
+            templateUrl: './input.component.html'
+        }),
+        __metadata("design:paramtypes", [])
+    ], InputComponent);
     return InputComponent;
 }());
-__decorate([
-    Input(),
-    __metadata("design:type", String)
-], InputComponent.prototype, "label", void 0);
-__decorate([
-    Input(),
-    __metadata("design:type", String)
-], InputComponent.prototype, "errorMessage", void 0);
-__decorate([
-    ContentChild(NgModel),
-    __metadata("design:type", NgModel)
-], InputComponent.prototype, "model", void 0);
-__decorate([
-    ContentChild(FormControlName),
-    __metadata("design:type", FormControlName)
-], InputComponent.prototype, "control", void 0);
-InputComponent = __decorate([
-    Component({
-        selector: 'mt-input-container',
-        templateUrl: './input.component.html'
-    }),
-    __metadata("design:paramtypes", [])
-], InputComponent);
 export { InputComponent };
 //# sourceMappingURL=input.component.js.map

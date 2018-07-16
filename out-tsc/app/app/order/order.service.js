@@ -12,7 +12,7 @@ import { ShoppingCartService } from "../restaurant-detail/shopping-cart/shopping
 import { HttpClient } from "@angular/common/http";
 import 'rxjs/add/operator/map';
 import { MEAT_API } from '../app.api';
-var OrderService = (function () {
+var OrderService = /** @class */ (function () {
     function OrderService(cartService, http) {
         this.cartService = cartService;
         this.http = http;
@@ -39,11 +39,11 @@ var OrderService = (function () {
         return this.http.post(MEAT_API + "/orders", order)
             .map(function (order) { return order.id; });
     };
+    OrderService = __decorate([
+        Injectable(),
+        __metadata("design:paramtypes", [ShoppingCartService, HttpClient])
+    ], OrderService);
     return OrderService;
 }());
-OrderService = __decorate([
-    Injectable(),
-    __metadata("design:paramtypes", [ShoppingCartService, HttpClient])
-], OrderService);
 export { OrderService };
 //# sourceMappingURL=order.service.js.map

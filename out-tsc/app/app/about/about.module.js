@@ -10,16 +10,16 @@ import { AboutComponent } from "./about.component";
 var ROUTES = [
     { path: '', component: AboutComponent }
 ];
-var AboutModule = (function () {
+var AboutModule = /** @class */ (function () {
     function AboutModule() {
     }
+    AboutModule = __decorate([
+        NgModule({
+            declarations: [AboutComponent],
+            imports: [RouterModule, RouterModule.forChild(ROUTES)]
+        })
+    ], AboutModule);
     return AboutModule;
 }());
-AboutModule = __decorate([
-    NgModule({
-        declarations: [AboutComponent],
-        imports: [RouterModule, RouterModule.forChild(ROUTES)]
-    })
-], AboutModule);
 export { AboutModule };
 //# sourceMappingURL=about.module.js.map

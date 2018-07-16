@@ -8,19 +8,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 import { Component } from '@angular/core';
-var AboutComponent = /** @class */ (function () {
-    function AboutComponent() {
+import { FormBuilder, Validators } from '@angular/forms';
+var LoginComponent = /** @class */ (function () {
+    function LoginComponent(fb) {
+        this.fb = fb;
     }
-    AboutComponent.prototype.ngOnInit = function () {
+    LoginComponent.prototype.ngOnInit = function () {
+        this.loginForm = this.fb.group({
+            email: this.fb.control('', [Validators.required, Validators.email]),
+            password: this.fb.control('', [Validators.required]),
+        });
     };
-    AboutComponent = __decorate([
+    LoginComponent = __decorate([
         Component({
-            selector: 'mt-about',
-            templateUrl: './about.component.html'
+            selector: 'mt-login',
+            templateUrl: './login.component.html',
+            styleUrls: ['./login.component.css']
         }),
-        __metadata("design:paramtypes", [])
-    ], AboutComponent);
-    return AboutComponent;
+        __metadata("design:paramtypes", [FormBuilder])
+    ], LoginComponent);
+    return LoginComponent;
 }());
-export { AboutComponent };
-//# sourceMappingURL=about.component.js.map
+export { LoginComponent };
+//# sourceMappingURL=login.component.js.map

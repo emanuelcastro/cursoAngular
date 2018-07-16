@@ -10,7 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { RestaurantsService } from '../../restaurants/restaurants.service';
-var ReviewsComponent = (function () {
+var ReviewsComponent = /** @class */ (function () {
     function ReviewsComponent(restaurantsService, route) {
         this.restaurantsService = restaurantsService;
         this.route = route;
@@ -18,15 +18,15 @@ var ReviewsComponent = (function () {
     ReviewsComponent.prototype.ngOnInit = function () {
         this.reviews = this.restaurantsService.reviewsOfRestaurant(this.route.parent.snapshot.params['id']);
     };
+    ReviewsComponent = __decorate([
+        Component({
+            selector: 'mt-reviews',
+            templateUrl: './reviews.component.html'
+        }),
+        __metadata("design:paramtypes", [RestaurantsService,
+            ActivatedRoute])
+    ], ReviewsComponent);
     return ReviewsComponent;
 }());
-ReviewsComponent = __decorate([
-    Component({
-        selector: 'mt-reviews',
-        templateUrl: './reviews.component.html'
-    }),
-    __metadata("design:paramtypes", [RestaurantsService,
-        ActivatedRoute])
-], ReviewsComponent);
 export { ReviewsComponent };
 //# sourceMappingURL=reviews.component.js.map

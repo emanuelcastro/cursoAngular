@@ -15,25 +15,26 @@ import { RestaurantsService } from "../restaurants/restaurants.service";
 import { OrderService } from "../order/order.service";
 import { SnackbarComponent } from './messages/snackbar/snackbar.component';
 import { NotificationService } from "./messages/notification.service";
-var SharedModule = SharedModule_1 = (function () {
+var SharedModule = /** @class */ (function () {
     function SharedModule() {
     }
+    SharedModule_1 = SharedModule;
     SharedModule.forRoot = function () {
         return {
             ngModule: SharedModule_1,
             providers: [ShoppingCartService, RestaurantsService, OrderService, NotificationService]
         };
     };
+    SharedModule = SharedModule_1 = __decorate([
+        NgModule({
+            declarations: [InputComponent, RadioComponent, RatingComponent, SnackbarComponent],
+            imports: [CommonModule, FormsModule, ReactiveFormsModule],
+            exports: [InputComponent, RadioComponent, RatingComponent, SnackbarComponent,
+                CommonModule, FormsModule, ReactiveFormsModule]
+        })
+    ], SharedModule);
     return SharedModule;
+    var SharedModule_1;
 }());
-SharedModule = SharedModule_1 = __decorate([
-    NgModule({
-        declarations: [InputComponent, RadioComponent, RatingComponent, SnackbarComponent],
-        imports: [CommonModule, FormsModule, ReactiveFormsModule],
-        exports: [InputComponent, RadioComponent, RatingComponent, SnackbarComponent,
-            CommonModule, FormsModule, ReactiveFormsModule]
-    })
-], SharedModule);
 export { SharedModule };
-var SharedModule_1;
 //# sourceMappingURL=shared.module.js.map
