@@ -44,6 +44,7 @@ var RadioComponent = /** @class */ (function () {
      */
     RadioComponent.prototype.setDisabledState = function (isDisabled) {
     };
+    var RadioComponent_1;
     __decorate([
         Input(),
         __metadata("design:type", Array)
@@ -63,7 +64,6 @@ var RadioComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], RadioComponent);
     return RadioComponent;
-    var RadioComponent_1;
 }());
 export { RadioComponent };
 //# sourceMappingURL=radio.component.js.map

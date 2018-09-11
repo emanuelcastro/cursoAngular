@@ -9,14 +9,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { LoginService } from './login.service';
+import { NotificationService } from '../../shared/messages/notification.service';
 var LoginComponent = /** @class */ (function () {
-    function LoginComponent(fb) {
+    function LoginComponent(fb, loginService, notificationService) {
         this.fb = fb;
+        this.loginService = loginService;
+        this.notificationService = notificationService;
     }
     LoginComponent.prototype.ngOnInit = function () {
         this.loginForm = this.fb.group({
             email: this.fb.control('', [Validators.required, Validators.email]),
             password: this.fb.control('', [Validators.required]),
+        });
+    };
+    LoginComponent.prototype.login = function () {
+        var _this = this;
+        this.loginService.login(this.loginForm.value.email, this.loginForm.value.password)
+            .subscribe(function (user) {
+            return _this.notificationService.notify("Bem vindo, " + user.name);
+        }, function (response) {
+            return _this.notificationService.notify(response.error.message);
         });
     };
     LoginComponent = __decorate([
@@ -25,7 +38,9 @@ var LoginComponent = /** @class */ (function () {
             templateUrl: './login.component.html',
             styleUrls: ['./login.component.css']
         }),
-        __metadata("design:paramtypes", [FormBuilder])
+        __metadata("design:paramtypes", [FormBuilder,
+            LoginService,
+            NotificationService])
     ], LoginComponent);
     return LoginComponent;
 }());

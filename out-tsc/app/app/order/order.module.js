@@ -13,7 +13,7 @@ import { DeliveryCostsComponent } from './delivery-costs/delivery-costs.componen
 var ROUTES = [
     { path: '', component: OrderComponent }
 ];
-var OrderModule = /** @class */ (function () {
+var OrderModule = (function () {
     function OrderModule() {
     }
     OrderModule = __decorate([

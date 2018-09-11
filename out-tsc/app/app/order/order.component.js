@@ -75,6 +75,7 @@ var OrderComponent = /** @class */ (function () {
         });
         console.log(order);
     };
+    var OrderComponent_1;
     OrderComponent = OrderComponent_1 = __decorate([
         Component({
             selector: 'mt-order',
@@ -85,7 +86,6 @@ var OrderComponent = /** @class */ (function () {
             FormBuilder])
     ], OrderComponent);
     return OrderComponent;
-    var OrderComponent_1;
 }());
 export { OrderComponent };
 //# sourceMappingURL=order.component.js.map

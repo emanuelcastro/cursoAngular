@@ -25,7 +25,7 @@ import { OrderSumaryComponent } from './order-sumary/order-sumary.component';
 import { SharedModule } from "./shared/shared.module";
 import { NotFoundComponent } from './not-found/not-found.component';
 import { LoginComponent } from './security/login/login.component';
-var AppModule = /** @class */ (function () {
+var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
